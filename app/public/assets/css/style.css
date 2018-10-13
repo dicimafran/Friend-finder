@@ -1,0 +1,71 @@
+
+@media screen and (max-width: 670px) {
+    header { 
+        min-height: 200px;
+    }
+}
+
+/* General layout stuff  */
+header {
+    background: url(friends.jpg);
+    background-size: cover;
+    height: 23em;
+    min-height: 1000 px;
+    overflow:hidden;
+    margin-bottom: 2em;
+}
+
+header h1 u {
+    color: white;
+    font-family: 'Niconne', cursive;
+    filter: drop-shadow(0 0 0.75rem #ffe971);
+}
+
+#surveybody {
+    background-color: black;
+}
+
+footer  {
+    background-color: black;
+}
+
+#content { 
+    padding: 3em;
+}
+
+.container #content {
+    background-color: white;
+    padding: 2em;
+}
+
+.container .row {
+    padding:1em;
+    margin: 1em;
+}
+
+/* Class to center stuff */
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Home page style */
+#content img {
+    max-width: 313px;
+}
+
+#page-footer .container {
+    padding:2em;
+}
+
+#page-footer .row {
+    justify-content: center;
+    margin:0 auto;
+}
+
+/* Survey style*/
+
+#surveysubmit {
+    margin: 1em;
+}

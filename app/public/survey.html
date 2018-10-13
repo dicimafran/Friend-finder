@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title> Friend Finder </title>
+
+    <!-- CSS & JS -->
+    <link rel='stylesheet' type='text/css' href='assets/css/style.css'>
+
+
+    <!-- Bootstrap and materialize -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO'
+        crossorigin='anonymous'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css' />
+
+    <!-- Fonts and icons-->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Niconne' rel='stylesheet'>
+
+    <!-- Scripts -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js'></script>
+
+
+
+</head>
+
+<body id='surveybody'>
+
+    <!-- Header -->
+    <header>
+        <div class='container '>
+            <h1 class='text-center'> <u>Friend Finder</u></h1>
+        </div>
+    </header>
+
+    <!-- Floating button leading to home -->
+    <div class='fixed-action-btn'>
+        <a href='/home' class='btn-floating btn-large red'>
+            <i class='large material-icons'> home </i>
+        </a>
+    </div>
+
+    <!-- Content -->
+    <main>
+        <div class='container'>
+            <div id='content'>
+                <h4 class='text-center'> Tell us about yourself.</h4>
+                <hr>
+                <br>
+                <form>
+
+                    <div class='input-field'>
+                        <i class='material-icons prefix'>account_circle</i>
+                        <br>
+                        <input id='name' type='text' class='validate'>
+                        <label for='name'> Name (required) </label>
+                    </div>
+
+                    <div class='input-field'>
+                        <i class='material-icons prefix'> add_a_photo </i>
+                        <br>
+                        <input id='photo' type='text' class='validate'>
+                        <label for='photoLink'>Photo Link (required)</label>
+                    </div>
+
+                </form>
+
+                <div class='row'>
+                    <h5> Q1: Your mind is always buzzing with unexplored ideas and plans. </h5>
+                    <select class='custom-select' id='q1' name='q1'>
+
+                        <option selected> Select an option. </option>
+                        <option value='1'> 1 (Strongly Disagree) </option>
+                        <option value='2'> 2 </option>
+                        <option value='3'> 3 </option>
+                        <option value='4'> 4 </option>
+                        <option value='5'> 5 (Strongly Agree) </option>
+
+                    </select>
+                </div>
+
+                <div class='row'>
+                    <h5> Generally speaking, you rely more on your experience than your imagination. </h5>
+                    <select class='custom-select' id='q2' name='q2'>
+
+                        <option selected> Select an option. </option>
+                        <option value='1'> 1 (Strongly Disagree) </option>
+                        <option value='2'> 2 </option>
+                        <option value='3'> 3 </option>
+                        <option value='4'> 4 </option>
+                        <option value='5'> 5 (Strongly Agree) </option>
+
+                    </select>
+                </div>
+
+                <div class='row'>
+                    <h5> Q3: You are sure about the meaning of life. </h5>
+                    <select class='custom-select' id='q3'>
+                        <option selected> Select an option. </option>
+                        <option value='1'> 1 (Strongly Disagree) </option>
+                        <option value='2'> 2 </option>
+                        <option value='3'> 3 </option>
+                        <option value='4'> 4 </option>
+                        <option value='5'> 5 (Strongly Agree) </option>
+                    </select>
+                </div>
+
+                <div class='row'>
+                    <h5> Q4: You know that the truth is out there. </h5>
+                    <select class='custom-select' id='q4'>
+                        <option selected> Select an option. </option>
+                        <option value='1'> 1 (Strongly Disagree) </option>
+                        <option value='2'> 2 </option>
+                        <option value='3'> 3 </option>
+                        <option value='4'> 4 </option>
+                        <option value='5'> 5 (Strongly Agree) </option>
+                    </select>
+                </div>
+
+                <div class='row'>
+                    <h5> Q5: You like outoor activities. </h5>
+                    <select class='custom-select' id='q5'>
+                        <option selected> Select an option. </option>
+                        <option value='1'> 1 (Strongly Disagree) </option>
+                        <option value='2'> 2 </option>
+                        <option value='3'> 3 </option>
+                        <option value='4'> 4 </option>
+                        <option value='5'> 5 (Strongly Agree) </option>
+                    </select>
+                </div>
+
+                <div class='row'>
+                    <h5> Q6: You are adventurous enough to try new or weird foods. </h5>
+                    <select class='custom-select' id='q6'>
+                        <option selected> Select an option. </option>
+                        <option value='1'> 1 (Strongly Disagree) </option>
+                        <option value='2'> 2 </option>
+                        <option value='3'> 3 </option>
+                        <option value='4'> 4 </option>
+                        <option value='5'> 5 (Strongly Agree) </option>
+                    </select>
+                </div>
+
+                <div class='row'>
+                    <h5> Q7: You can survive if you get thrown on some deserted island. </h5>
+                    <select class='custom-select' id='q7'>
+                        <option selected> Select an option. </option>
+                        <option value='1'> 1 (Strongly Disagree) </option>
+                        <option value='2'> 2 </option>
+                        <option value='3'> 3 </option>
+                        <option value='4'> 4 </option>
+                        <option value='5'> 5 (Strongly Agree) </option>
+                    </select>
+                </div>
+
+                <div class='row'>
+                    <h5> Q8: It is often difficult for you to relate to other people’s feelings. </h5>
+                    <select class='custom-select' id='q8'>
+                        <option selected> Select an option. </option>
+                        <option value='1'> 1 (Strongly Disagree) </option>
+                        <option value='2'> 2 </option>
+                        <option value='3'> 3 </option>
+                        <option value='4'> 4 </option>
+                        <option value='5'> 5 (Strongly Agree) </option>
+                    </select>
+                </div>
+
+                <div class='row'>
+                    <h5> Q9: You like dogs. </h5>
+                    <select class='custom-select' id='q9'>
+                        <option selected> Select an option. </option>
+                        <option value='1'> 1 (Strongly Disagree) </option>
+                        <option value='2'> 2 </option>
+                        <option value='3'> 3 </option>
+                        <option value='4'> 4 </option>
+                        <option value='5'> 5 (Strongly Agree) </option>
+                    </select>
+                </div>
+
+
+
+                <div class='row'>
+                    <h5> Q10: You question some of your life choices and feel deep regret. </h5>
+                    <select class='custom-select' id='q10'>
+                        <option selected> Select an option. </option>
+                        <option value='1'> 1 (Strongly Disagree) </option>
+                        <option value='2'> 2 </option>
+                        <option value='3'> 3 </option>
+                        <option value='4'> 4 </option>
+                        <option value='5'> 5 (Strongly Agree) </option>
+                    </select>
+                </div>
+
+                <div class='row'>
+                    <br>
+                    <button type='button' class='btn btn-primary btn-lg btn-block' id='surveysubmit'> Submit </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
+
+<script type='text/javascript'>
+
+    var surveyValArray = [];
+
+    let newFriend =
+    {
+        name: $('#name').val().trim(),
+        photolink: $('#photo').val().trim(),
+        surveyarray: [$('q1').val(), $('q2').val(), $('q3').val(), $('q4').val(), $('q5').val(), $('q6').val(), $('q7').val(), $('q8').val(), $('q9').val(), $('q10').val()]
+    };
+
+  var config = {
+      ".chosen-select"           : {},
+      ".chosen-select-deselect"  : {allow_single_deselect:true},
+      ".chosen-select-no-single" : {disable_search_threshold:10},
+      ".chosen-select-no-results": {no_results_text:'Oops, nothing found!'},
+      ".chosen-select-width"     : {width:"95%"}
+    }
+
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+
+    $("#submit").on("click", function(){
+
+    	function validateForm() {
+		  var isValid = true;
+		  $('.form-control').each(function() {
+		    if ( $(this).val() === '' )
+		        isValid = false;
+		  });
+
+		  $('.chosen-select').each(function() {
+
+		  	if( $(this).val() === "")
+		  		isValid = false
+		  })
+		  return isValid;
+		}
+
+		if (validateForm() == true)
+		{
+	    	var newFriend = {
+	    		name: $("#name").val(),
+	    		photo: $("#photo").val(),
+	    		scores: [$("q1").val(),$("q2").val(),$("q3").val(),$("q4").val(),$("q5").val(),$("q6").val(),$("q7").val(),$("q8").val(),$("q9").val(),$("q10").val()]
+	    		}
+
+	    	var currentURL = window.location.origin;
+
+	    	$.post(currentURL + "/api/friends", newFriend, function(data){
+
+	    		$("#bestMatchName").text(data.name);
+	    		$("#bestMatchPhoto").attr("src", data.photo);
+	    		$("#bestMatchPhoto").attr("width", "300");
+
+		    	$("#resultsModal").modal('toggle');
+
+	    	});
+
+		}
+		else
+		{
+			alert("Please fill out all fields before submitting. Thank you.");
+		}
+    	
+    	return false;
+    });
+
+    //Once the modal is closed, the page refreshes.
+    $('.modal').on('hidden.bs.modal', function(){
+    location.reload();
+	});
+
+</script>
