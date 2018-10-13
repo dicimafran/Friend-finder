@@ -2,6 +2,7 @@
 var express= require('express');
 var bodyParser= require('body-parser');
 var path= require('path');
+var friends= require ('./app/data/friends')
 
 
 // ===== Express App & Port variables w/ dataparser =====
@@ -12,11 +13,11 @@ var PORT= process.env.PORT || 8080;
 // For some reason, I had errors when bodyparser extended was true
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+app.use(express.static(path.join(__dirname, '/public')));
 // ================ Router ===================
 
-require('./routes/apiRoutes')(app);
-require('./routes/htmlRoutes')(app);
+require('./app/routes/apiRoutes')(app);
+require('./app/routes/htmlRoutes')(app);
 
 // ============= Port Listener ==================
 
