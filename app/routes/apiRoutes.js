@@ -44,7 +44,7 @@ module.exports = function (app) {
         for (var i = 0; i < (friends.length-1) ;i++) {
             totalDifference = 0;
   
-            for (var j = 0; j < friends[i].scores.length; j++){
+            for (var j = 0; j < friends[i].scores[j].length; j++){
                 totalDifference += Math.abs(friends[i].scores[j] - newFriend.scores[j])
                 }
             if (totalDifference<=bestMatch.matchScore){
@@ -57,6 +57,8 @@ module.exports = function (app) {
         res.json(bestMatch);
 
     });
+
+    
 }
     /* ===================== Comparison ================== 
 

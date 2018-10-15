@@ -10,20 +10,25 @@ var friends= require ('./app/data/friends')
 var app =express();
 var PORT= process.env.PORT || 8080;
 
-// For some reason, I had errors when bodyparser extended was true
-app.use(bodyParser.urlencoded({ extended: false }));
+// handles data parsing
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '/public')));
+
+
 // ================ Router ===================
 
-require('./app/routes/apiRoutes')(app);
-require('./app/routes/htmlRoutes')(app);
+require(__dirname + '/app/routes/apiRoutes')(app);
+require(__dirname + '/app/routes/htmlRoutes')(app);
+
+// This is to use the CSS style. Not sure why everything isn't showing up right.
+app.use(express.static('public'))
 
 // ============= Port Listener ==================
 
 app.listen(PORT, function() {
     console.log("App listening on PORT: " + PORT);
   });
+  
   
 
 /* ============ Summary of imports and exports ===============
@@ -39,4 +44,8 @@ app.listen(PORT, function() {
 
     Exports to api routes: 
         data/friends.js: stores the data from the friend array
-*/
+
+    notes: 
+        Path is required as a dependency.
+        Observe how router requires __dirname + the path being exported.
+        */

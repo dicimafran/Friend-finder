@@ -1,15 +1,15 @@
 var path = require('path');
 
 module.exports = function (app) {
+  
+    app.get('/', function (req,res) {
+        res.sendFile(path.join(__dirname, '/../public/home.html'))
+    });
 
     app.get('/survey', function (req, res) {
         res.sendFile(path.join(__dirname, '/../public/survey.html'));
     });
     
-    app.get('*', function (req, res) {
-        res.sendFile(path.join(__dirname, '/../public/home.html'));
-    });
-
 };
 
 /*======= HTML Route Notes ==============
@@ -31,5 +31,7 @@ What's going on:
         2) a function taking in requests and response from the user.
 
     When the user makes a GET request, the server takes the response and redirects the user to the appropriate html file.
+
+note: notice how the resp.SendFile's 2nd argument is the path where you wanna redirect the user, relative to this file.
 
 */

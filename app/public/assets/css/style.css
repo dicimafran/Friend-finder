@@ -7,7 +7,7 @@
 
 /* General layout stuff  */
 header {
-    background: url(friends.jpg);
+    background-image: url('../images/friends.jpg');
     background-size: cover;
     height: 23em;
     min-height: 1000 px;
