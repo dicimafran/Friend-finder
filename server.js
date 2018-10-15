@@ -21,7 +21,7 @@ require(__dirname + '/app/routes/apiRoutes')(app);
 require(__dirname + '/app/routes/htmlRoutes')(app);
 
 // This is to use the CSS style. Not sure why everything isn't showing up right.
-app.use(express.static('public'))
+app.use('/static', express.static(path.join(__dirname, './app/public')))
 
 // ============= Port Listener ==================
 
